@@ -1,6 +1,5 @@
 <template>
     <div class="cadastroPessoas">
-        <h1>{{ msg }}</h1>
         <h2>Cadastrar Pessoas na Plataforma</h2>
             <form id="cadastro">
                 <label for="idFiscal">CPF/CNPJ:</label>
@@ -25,33 +24,35 @@
 </template>
 
 <script>
-export default {
-  name: 'CadastroPessoas',
-  props: {
-    msg: String
-  },
-  cadastro () {
-    var xhr = new XMLHttpRequest()
-    var idFiscal = document.getElementById('idFiscal').value
-    var nome = document.getElementById('nome').value
-    var dataNasc = document.getElementById('dataNasc').value
-    var tipoPessoa = document.getElementById('tipoPessoa').value
+function cadastro () {
+  var xhr = new XMLHttpRequest()
+  var idFiscal = document.getElementById('idFiscal').value
+  var nome = document.getElementById('nome').value
+  var dataNasc = document.getElementById('dataNasc').value
+  var tipoPessoa = document.getElementById('tipoPessoa').value
 
-    const jsonObj =
+  const jsonObj =
 {
   idFiscal: idFiscal,
   nome: nome,
   dataNasc: dataNasc,
   tipoPessoa: tipoPessoa
 }
-    var dataBase = JSON.stringify(jsonObj)
-    const myURL = 'http://localhost:8080/api/v1/pessoas/cadastro'
+  var dataBase = JSON.stringify(jsonObj)
+  const myURL = 'http://localhost:8080/api/v1/pessoas/cadastro'
 
-    console.log(jsonObj)
-    console.log(dataBase)
-    xhr.open('POST', myURL, true)
-    xhr.setRequestHeader('Content-Type', 'application/json')
-    xhr.send(JSON.stringify(jsonObj))
+  console.log(jsonObj)
+  console.log(dataBase)
+  xhr.open('POST', myURL, true)
+  xhr.setRequestHeader('Content-Type', 'application/json')
+  xhr.send(JSON.stringify(jsonObj))
+}
+
+export default {
+  methods: {
+    cadastro () {
+      cadastro()
+    }
   }
 
 }
