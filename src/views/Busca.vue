@@ -2,7 +2,7 @@
 <div class="buscaPessoas">
     <h1> Busca de Pessoas</h1>
     <img alt="Basa Logo" src="../assets/basalogo.jpg">
-    <busca msg="Busca de Pessoas"/>
+    <Busca msg="Busca de Pessoas"/>
 </div>
 </template>
 
@@ -18,5 +18,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+img
+  margin: 20px
 
 </style>
