@@ -2,7 +2,7 @@
 <div class="cadastroPessoas">
     <h1> Cadastro de Pessoas</h1>
     <img alt="Basa Logo" src="../assets/basalogo.jpg">
-    <cadastro-pe msg="Cadastro de Pessoas"/>
+    <Cadastro-pe msg="Cadastro de Pessoas"/>
 </div>
 </template>
 
@@ -18,5 +18,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+img
+  margin: 20px
 
 </style>

@@ -1,25 +1,25 @@
 <template>
     <div class="cadastroPessoas">
         <h2>Cadastrar Pessoas na Plataforma</h2>
-            <form id="cadastro">
-                <label for="idFiscal">CPF/CNPJ:</label>
-                <input type="number" id="idFiscal" />
-            <div>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" />
-            </div>
-            <div>
-                <label for="dataNasc">Data de Nascimento:</label>
-                <input type="text" id="dataNasc" />
-            </div>
-            <div>
-                <label for="tipoPessoa">Tipo de Pessoa:</label>
-                <input type="text" id="tipoPessoa" />
-            </div>
-            <div id="cadastro">
-                <button v-on:click="cadastro()">Cadastro</button>
-            </div>
-            </form>
+              <div class="grid-container">
+                  <div class="grid-labels">
+                    <label for="idFiscal">CPF/CNPJ:</label>
+                    <label for="nome">Nome:</label>
+                    <label for="dataNasc">Data de Nascimento:</label>
+                    <label for="tipoPessoa">Tipo de Pessoa:</label>
+                  </div>
+                  <div class="grid-inputs">
+                    <input type="number" id="idFiscal" />
+                    <input type="text" id="nome" />
+                    <input type="date" id="dataNasc" />
+                    <input type="text" id="tipoPessoa" />
+                  </div>
+                  <div class="grid-item">
+                      <div id="cadastro">
+                        <button v-on:click="cadastro()">Cadastro</button>
+                      </div>
+                  </div>
+              </div>
     </div>
 </template>
 
@@ -60,6 +60,19 @@ export default {
 </script>
 
 <style lang="stylus">
+.grid-labels{
+   grid-column: 1 / 1
+   grid-row: 1 / 6
+}
+.grid-inputs{
+ grid-column: 2
+ grid-column: 1 / 5
+}
+.grid-container {
+  display: inline-grid
+  grid-template-rows: 80px 80px 80px 80px 80px 80px 80px
+  grid-template-columns: 200px auto auto
+}
 h2
   margin 40px 0 0
 
@@ -73,4 +86,20 @@ li
 
 a
   color #42b983
+
+label
+  color yellow
+  margin 0 10px
+  padding: 1px
+  border: 2px solid #13b523
+  border-radius: 5px
+  background-color: lightblue;
+
+input
+  width: 100%
+  padding: 2px
+  margin: 20px
+button
+  color #23b123
+
 </style>
