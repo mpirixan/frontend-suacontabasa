@@ -61,17 +61,36 @@ export default {
 
 <style lang="stylus">
 .grid-labels{
-   grid-column: 1 / 1
-   grid-row: 1 / 6
-}
-.grid-inputs{
- grid-column: 2
- grid-column: 1 / 5
-}
-.grid-container {
+  grid-area: Label
   display: inline-grid
-  grid-template-rows: 80px 80px 80px 80px 80px 80px 80px
-  grid-template-columns: 200px auto auto
+  justify-items: center
+  align-items: center
+  }
+
+.grid-inputs{
+  grid-area: Inputs
+  display: inline-grid
+  justify-items: center
+  align-items: center}
+
+.grid-item{
+  grid-area: Button}
+
+.grid-container{
+  background: lightblue
+  border: 2px solid #13b523
+  border-radius: 3px
+  display: inline-grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr 1fr 1fr 1.1fr 0.8fr 1.1fr
+  gap: 0px 0px
+  grid-template-areas:
+    "Label Inputs"\
+    "Label Inputs"\
+    "Label Inputs"\
+    "Label Inputs"\
+    "Label Inputs"\
+    "Button Button"
 }
 h2
   margin 40px 0 0
@@ -88,18 +107,18 @@ a
   color #42b983
 
 label
-  color yellow
-  margin 0 10px
-  padding: 1px
-  border: 2px solid #13b523
-  border-radius: 5px
-  background-color: lightblue;
+  display: grid
+  color dark
+  margin 30px
 
 input
-  width: 100%
-  padding: 2px
-  margin: 20px
-button
-  color #23b123
+  display: grid
+  height: 18%
+  width: 90%
+  margin: 10px
 
+button
+  color dark
+  width: 50%
+  height: 50%
 </style>
