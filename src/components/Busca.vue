@@ -4,8 +4,12 @@
             <div class="container">
                 <div class="Buscar">
                   <div id="busca">
+                    <h3>Por Nome</h3>
                     <input type="text" id="nome" Nome />
                     <button v-on:click="busca()">Buscar</button>
+                    <h3>Por identificação fiscal</h3>
+                    <input type="number" id="idFiscal" IdFiscal />
+                    <button v-on:click="buscaIdFiscal()">Buscar</button>
                   </div>
                   </div>
                 <div class="Dados"></div>
@@ -40,10 +44,38 @@ function buscaNome () {
   xhr.send(null)
 }
 
+function buscaIdFiscal () {
+  function readBody (xhr) {
+    var data
+    if (!xhr.responseType || xhr.responseType === 'text') {
+      data = xhr.responseText
+    } else if (xhr.responseType === 'document') {
+      data = xhr.responseXML
+    } else {
+      data = xhr.response
+    }
+    return data
+  }
+
+  var xhr = new XMLHttpRequest()
+  var idFiscal = document.getElementById('idFiscal').value
+  xhr.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+      console.log(readBody(xhr))
+    }
+  }
+  const myURL = 'http://localhost:8080/api/v1/pessoas/cpf-cnpj/'
+  xhr.open('get', myURL + idFiscal, true)
+  xhr.setRequestHeader('Content-Type', 'application/json')
+  xhr.send(null)
+}
 export default {
   methods: {
     busca () {
       buscaNome()
+    },
+    buscaIdFiscal () {
+      buscaIdFiscal()
     }
   }
 }
