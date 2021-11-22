@@ -6,13 +6,14 @@
                   <div id="busca">
                     <h3>Por Nome</h3>
                     <input type="text" id="nome" Nome />
-                    <button v-on:click="busca()">Buscar</button>
+                    <button v-on:click="buscaNome()">Buscar</button>
                     <h3>Por identificação fiscal</h3>
                     <input type="number" id="idFiscal" IdFiscal />
                     <button v-on:click="buscaIdFiscal()">Buscar</button>
                   </div>
                   </div>
-                <div class="Dados"></div>
+                <div class="Dados">
+                </div>
             </div>
     </div>
 </template>
@@ -30,7 +31,6 @@ function buscaNome () {
     }
     return data
   }
-
   var xhr = new XMLHttpRequest()
   var nome = document.getElementById('nome').value
   xhr.onreadystatechange = function () {
@@ -71,7 +71,7 @@ function buscaIdFiscal () {
 }
 export default {
   methods: {
-    busca () {
+    buscaNome () {
       buscaNome()
     },
     buscaIdFiscal () {
