@@ -10,7 +10,6 @@
 import CadastroPe from '../components/CadastroPe.vue'
 
 export default {
-  name: 'Cadastro',
   components: {
     CadastroPe
   }

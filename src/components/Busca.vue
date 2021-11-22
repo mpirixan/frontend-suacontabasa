@@ -42,7 +42,7 @@ function buscaNome () {
 
 export default {
   methods: {
-    buscaNome () {
+    busca () {
       buscaNome()
     }
   }

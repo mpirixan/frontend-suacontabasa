@@ -7,12 +7,16 @@
 </template>
 
 <script>
-import Busca from '../components/Busca.vue'
+import Busca from '@/components/Busca.vue'
 
 export default {
-  name: 'Busca',
   components: {
     Busca
+  },
+  methods: {
+    goBack () {
+      window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
+    }
   }
 }
 </script>
