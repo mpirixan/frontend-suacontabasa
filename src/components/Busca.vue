@@ -28,7 +28,7 @@ function buscaNome () {
   }
 
   var xhr = new XMLHttpRequest()
-  var nome
+  var nome = document.getElementById('nome').value
   xhr.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
       console.log(readBody(xhr))
