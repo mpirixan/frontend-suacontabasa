@@ -11,7 +11,9 @@
                   <div class="grid-inputs">
                     <input type="number" id="idFiscal" />
                     <input type="text" id="nome" />
-                    <input type="date" id="dataNasc" />
+                    <input type="text" placeholder="YYYY-MM-DD"
+                          onfocus="(this.type='date')"
+                          onblur="(this.type='text')" id="dataNasc" />
                     <input type="text" id="tipoPessoa" />
                   </div>
                   <div class="grid-item">
@@ -31,10 +33,11 @@ function cadastro () {
   var dataNasc = document.getElementById('dataNasc').value
   var tipoPessoa = document.getElementById('tipoPessoa').value
 
+  dataNasc = String(dataNasc)
   axios.post('http://localhost:8080/api/v1/pessoas/cadastro', {
     idFiscal: idFiscal,
     nome: nome,
-    dataNasc: dataNasc,
+    dataNascimento: dataNasc,
     tipoPessoa: tipoPessoa
   })
     .then(function (response) {
