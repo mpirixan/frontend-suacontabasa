@@ -13,6 +13,9 @@
                   </div>
                   </div>
                 <div class="Dados">
+                  <pre id="response" style=
+                    "color:green; font-size: 20px; font-weight: bold;">
+                  </pre>
                 </div>
             </div>
     </div>
@@ -25,6 +28,8 @@ function buscaNome () {
   axios.get('http://localhost:8080/api/v1/pessoas/nome/' + nome)
     .then(function (response) {
       console.log(response.data)
+      const myArray = JSON.stringify(response.data, undefined, 4)
+      document.getElementById('response').innerHTML = myArray
     })
     .catch(function (error) {
     // handle error
@@ -41,6 +46,8 @@ function buscaIdFiscal () {
   axios.get('http://localhost:8080/api/v1/pessoas/cpf-cnpj/' + idFiscal)
     .then(function (response) {
       console.log(response.data)
+      const myArray = JSON.stringify(response.data, undefined, 4)
+      document.getElementById('response').innerHTML = myArray
     })
     .catch(function (error) {
     // handle error
@@ -75,7 +82,9 @@ export default {
 }
 
 .Buscar { grid-area: Buscar; }
-.Dados { grid-area: Dados; }
+.Dados { grid-area: Dados
+  display: inline-grid
+ }
 
 h2
   margin 40px 0 0
