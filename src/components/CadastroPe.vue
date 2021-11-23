@@ -25,27 +25,24 @@
 
 <script>
 function cadastro () {
-  var xhr = new XMLHttpRequest()
+  const axios = require('axios').default
   var idFiscal = document.getElementById('idFiscal').value
   var nome = document.getElementById('nome').value
   var dataNasc = document.getElementById('dataNasc').value
   var tipoPessoa = document.getElementById('tipoPessoa').value
 
-  const jsonObj =
-{
-  idFiscal: idFiscal,
-  nome: nome,
-  dataNasc: dataNasc,
-  tipoPessoa: tipoPessoa
-}
-  var dataBase = JSON.stringify(jsonObj)
-  const myURL = 'http://localhost:8080/api/v1/pessoas/cadastro'
-
-  console.log(jsonObj)
-  console.log(dataBase)
-  xhr.open('POST', myURL, true)
-  xhr.setRequestHeader('Content-Type', 'application/json')
-  xhr.send(JSON.stringify(jsonObj))
+  axios.post('http://localhost:8080/api/v1/pessoas/cadastro', {
+    idFiscal: idFiscal,
+    nome: nome,
+    dataNasc: dataNasc,
+    tipoPessoa: tipoPessoa
+  })
+    .then(function (response) {
+      console.log(response)
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
 }
 
 export default {
