@@ -20,54 +20,35 @@
 
 <script>
 function buscaNome () {
-  function readBody (xhr) {
-    var data
-    if (!xhr.responseType || xhr.responseType === 'text') {
-      data = xhr.responseText
-    } else if (xhr.responseType === 'document') {
-      data = xhr.responseXML
-    } else {
-      data = xhr.response
-    }
-    return data
-  }
-  var xhr = new XMLHttpRequest()
   var nome = document.getElementById('nome').value
-  xhr.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status === 200) {
-      console.log(readBody(xhr))
-    }
-  }
-  const myURL = 'http://localhost:8080/api/v1/pessoas/nome/'
-  xhr.open('get', myURL + nome, true)
-  xhr.setRequestHeader('Content-Type', 'application/json')
-  xhr.send(null)
+  const axios = require('axios').default
+  axios.get('http://localhost:8080/api/v1/pessoas/nome/' + nome)
+    .then(function (response) {
+      console.log(response.data)
+    })
+    .catch(function (error) {
+    // handle error
+      console.log(error)
+    })
+    .then(function () {
+    // always executed
+    })
 }
 
 function buscaIdFiscal () {
-  function readBody (xhr) {
-    var data
-    if (!xhr.responseType || xhr.responseType === 'text') {
-      data = xhr.responseText
-    } else if (xhr.responseType === 'document') {
-      data = xhr.responseXML
-    } else {
-      data = xhr.response
-    }
-    return data
-  }
-
-  var xhr = new XMLHttpRequest()
   var idFiscal = document.getElementById('idFiscal').value
-  xhr.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status === 200) {
-      console.log(readBody(xhr))
-    }
-  }
-  const myURL = 'http://localhost:8080/api/v1/pessoas/cpf-cnpj/'
-  xhr.open('get', myURL + idFiscal, true)
-  xhr.setRequestHeader('Content-Type', 'application/json')
-  xhr.send(null)
+  const axios = require('axios').default
+  axios.get('http://localhost:8080/api/v1/pessoas/cpf-cnpj/' + idFiscal)
+    .then(function (response) {
+      console.log(response.data)
+    })
+    .catch(function (error) {
+    // handle error
+      console.log(error)
+    })
+    .then(function () {
+    // always executed
+    })
 }
 export default {
   methods: {
@@ -105,7 +86,7 @@ ul
 
 li
   display inline-block
-  margin 0 10px
+  margin 10 10px
 
 a
   color #42b983
@@ -113,6 +94,10 @@ a
 input
   display: grid
   height: 18%
-  width: 90%
-  margin: 10px
+  width: auto
+  margin: auto
+
+button
+  width: auto
+  height: 50%
 </style>
