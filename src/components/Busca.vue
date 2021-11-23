@@ -28,8 +28,8 @@ function buscaNome () {
   axios.get('http://localhost:8080/api/v1/pessoas/nome/' + nome)
     .then(function (response) {
       console.log(response.data)
-      const myArray = JSON.stringify(response.data, undefined, 4)
-      document.getElementById('response').innerHTML = myArray
+      const jsonObj = JSON.stringify(response.data, undefined, 4)
+      document.getElementById('response').innerHTML = jsonObj
     })
     .catch(function (error) {
     // handle error
@@ -46,8 +46,8 @@ function buscaIdFiscal () {
   axios.get('http://localhost:8080/api/v1/pessoas/cpf-cnpj/' + idFiscal)
     .then(function (response) {
       console.log(response.data)
-      const myArray = JSON.stringify(response.data, undefined, 4)
-      document.getElementById('response').innerHTML = myArray
+      const jsonObj = JSON.stringify(response.data, undefined, 4)
+      document.getElementById('response').innerHTML = jsonObj
     })
     .catch(function (error) {
     // handle error
