@@ -14,10 +14,9 @@
                     <input type="text" placeholder="YYYY-MM-DD"
                           onfocus="(this.type='date')"
                           onblur="(this.type='text')" id="dataNasc" />
-                    <input type="text" id="dataNasc" />
                     <select id="tipoPessoa" style="flex-grow: 1">
-                      <option value="FISICA"> Conta Corrente</option>
-                      <option value="JURIDICA">Conta Poupança</option>
+                      <option value="FISICA"> Física</option>
+                      <option value="JURIDICA">Jurídica</option>
                     </select>
                   </div>
                   <div class="grid-item">
@@ -125,4 +124,5 @@ button
   color dark
   width: 50%
   height: 50%
+
 </style>

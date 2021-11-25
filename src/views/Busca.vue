@@ -1,7 +1,7 @@
 <template>
 <div class="buscaPessoas">
     <h1> Busca de Pessoas</h1>
-    <img alt="Basa Logo" src="../assets/basalogo.jpg">
+    <img alt="Basa Logo" src="../assets/logo-header-2.png">
     <Busca msg="Busca de Pessoas"/>
 </div>
 </template>
@@ -23,6 +23,9 @@ export default {
 
 <style lang="stylus" scoped>
 img
-  margin: 20px
+  margin: 15px
 
+.buscaPessoas{
+  background: url(../assets/login-background.png)
+}
 </style>

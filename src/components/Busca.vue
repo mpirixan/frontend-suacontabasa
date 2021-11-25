@@ -14,7 +14,7 @@
                   </div>
                 <div class="Dados">
                   <pre id="response" style=
-                    "color:green; font-size: 20px; font-weight: bold;">
+                    "color:red; font-size: 20px; font-weight: bold;">
                   </pre>
                 </div>
             </div>
@@ -81,7 +81,11 @@ export default {
     "Dados";
 }
 
-.Buscar { grid-area: Buscar; }
+.Buscar { grid-area: Buscar
+  display: inline-grid
+  justify-items: center
+  align-items: center
+}
 .Dados { grid-area: Dados
   display: inline-grid
  }
@@ -103,8 +107,8 @@ a
 input
   display: grid
   height: 18%
-  width: auto
-  margin: auto
+  width: 600px
+  margin: 20px
 
 button
   width: auto

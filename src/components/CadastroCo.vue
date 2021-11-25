@@ -45,6 +45,8 @@ function cadastro () {
     agencia: agencia,
     dataVigencia: '2030-12-30',
     senha: senha,
+    saldo: 0,
+    status: 'ATIVA',
     tipoConta: tipoConta
   })
     .then(function (response) {

@@ -1,7 +1,7 @@
 <template>
 <div class="cadastroContas">
     <h1> Cadastro de Contas</h1>
-    <img alt="Basa Logo" src="../assets/basalogo.jpg">
+    <img alt="Basa Logo" src="../assets/logo-header-2.png">
     <CadastroCo msg="Cadastro de Contas"/>
 </div>
 </template>
