@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 import CadastroPe from '../views/CadastroPessoas.vue'
 import Busca from '../views/Busca.vue'
 import CadastroCo from '../views/CadastroConta.vue'
@@ -11,7 +10,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: () => import('../views/Index.vue')
   },
   {
     path: '/CadastroPessoas',

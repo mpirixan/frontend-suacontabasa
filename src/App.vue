@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/CadastroPessoas">Cadastro Pessoas</router-link> |
-      <router-link to="/CadastroConta">Cadastro Contas</router-link> |
-      <router-link to="/busca">Busca</router-link>
+      <router-link to="/" tag="button">Home</router-link>
+      <router-link to="/CadastroPessoas" tag="button">Cadastro Pessoas</router-link>
+      <router-link to="/CadastroConta" tag="button">Cadastro Contas</router-link>
+      <router-link to="/busca" tag="button">Busca</router-link>
     </div>
     <router-view></router-view>
   </div>
@@ -18,6 +18,4 @@
   text-align center
   color #2c3e50
   margin-top 60px
-#nav
-  background-color: yellow
 </style>
