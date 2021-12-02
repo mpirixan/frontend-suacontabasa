@@ -33,7 +33,7 @@ function buscaNome () {
     })
     .catch(function (error) {
       // const jsonObj = JSON.stringify(error.response.data, undefined, 4)
-      document.getElementById('response').innerHTML = error.element.message
+      document.getElementById('response').innerHTML = 'Elemento não encontrado'
       console.log(error.response)
     })
     .then(function () {
