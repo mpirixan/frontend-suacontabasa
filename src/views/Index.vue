@@ -1,9 +1,9 @@
 <template>
-  <q-page padding>
+<div class="index">
     <h1>Seja Bem Vindo(a) ao Sistema!</h1>
     <h3>Sua Conta Basa</h3>
     <Logo />
-  </q-page>
+</div>
 </template>
 
 <script>

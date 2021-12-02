@@ -1,10 +1,18 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/" tag="button">Home</router-link>
-      <router-link to="/CadastroPessoas" tag="button">Cadastro Pessoas</router-link>
-      <router-link to="/CadastroConta" tag="button">Cadastro Contas</router-link>
-      <router-link to="/busca" tag="button">Busca</router-link>
+      <router-link to="/" custom v-slot="{ navigate }">
+        <button @click="navigate" @keypress.enter="navigate" role="link">Home</button>
+      </router-link>
+      <router-link to="/CadastroPessoas" custom v-slot="{ navigate }">
+        <button @click="navigate" @keypress.enter="navigate" role="link">Pessoas</button>
+      </router-link>
+      <router-link to="/CadastroConta" custom v-slot="{ navigate }">
+      <button @click="navigate" @keypress.enter="navigate" role="link"> Contas</button>
+      </router-link>
+      <router-link to="/busca" custom v-slot="{ navigate }">
+          <button @click="navigate" @keypress.enter="navigate" role="link">Busca</button>
+      </router-link>
     </div>
     <router-view></router-view>
   </div>
