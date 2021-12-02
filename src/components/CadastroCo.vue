@@ -40,13 +40,9 @@ function cadastro () {
   var senha = document.getElementById('senha').value
   var tipoConta = document.getElementById('tipoConta').value
 
-  axios.post('http://localhost:8080/api/v1/contas/cadastro', {
-    idPessoa: idPessoa,
+  axios.post('http://localhost:8080/api/v1/contas/cadastro/' + idPessoa, {
     agencia: agencia,
-    dataVigencia: '2030-12-30',
     senha: senha,
-    saldo: 0,
-    status: 'ATIVA',
     tipoConta: tipoConta
   })
     .then(function (response) {

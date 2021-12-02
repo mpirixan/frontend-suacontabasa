@@ -14,7 +14,7 @@
                   </div>
                 <div class="Dados">
                   <pre id="response" style=
-                    "color:red; font-size: 20px; font-weight: bold;">
+                    "color:black; font-size: 20px; font-weight: bold;background: lightblue;">
                   </pre>
                 </div>
             </div>
@@ -32,8 +32,9 @@ function buscaNome () {
       document.getElementById('response').innerHTML = jsonObj
     })
     .catch(function (error) {
-    // handle error
-      console.log(error)
+      // const jsonObj = JSON.stringify(error.response.data, undefined, 4)
+      document.getElementById('response').innerHTML = error.element.message
+      console.log(error.response)
     })
     .then(function () {
     // always executed

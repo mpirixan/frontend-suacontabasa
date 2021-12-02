@@ -19,4 +19,9 @@ export default {
 <style lang="stylus" scoped>
 img
   margin: 20px
+
+.cadastroPessoas{
+  background: darkgreen
+  color: #fff
+}
 </style>

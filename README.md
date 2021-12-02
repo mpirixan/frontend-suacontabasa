@@ -1,4 +1,5 @@
 # appbanco
+### Node.js versão 13.14.0
 
 ## Project setup
 ```
@@ -7,7 +8,7 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+yarn serve -- --port 3000
 ```
 
 ### Compiles and minifies for production

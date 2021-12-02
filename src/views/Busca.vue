@@ -7,16 +7,11 @@
 </template>
 
 <script>
-import Busca from '@/components/Busca.vue'
+import Busca from '../components/Busca.vue'
 
 export default {
   components: {
     Busca
-  },
-  methods: {
-    goBack () {
-      window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
-    }
   }
 }
 </script>
@@ -26,6 +21,7 @@ img
   margin: 15px
 
 .buscaPessoas{
-  background: url(../assets/login-background.png)
+  background: darkgreen
+  color: #fff
 }
 </style>

@@ -14,7 +14,7 @@
                     <input type="text" placeholder="YYYY-MM-DD"
                           onfocus="(this.type='date')"
                           onblur="(this.type='text')" id="dataNasc" />
-                    <select id="tipoPessoa" style="flex-grow: 1">
+                    <select id="tipoPessoa" style="width:200px">
                       <option value="FISICA"> Física</option>
                       <option value="JURIDICA">Jurídica</option>
                     </select>
@@ -81,8 +81,13 @@ export default {
 
 .grid-container{
   background: lightblue
+  color: #000000
+  font-size: 130%
+  font-family: "Lucida Console", "Courier New", monospace
+  font-weight: bold
   border: 2px solid #13b523
-  border-radius: 3px
+  border-radius: 5px
+  padding: 5px
   display: inline-grid
   grid-template-columns: 1fr 1fr
   grid-template-rows: 1fr 1fr 1fr 1.1fr 0.8fr 1.1fr
@@ -119,6 +124,14 @@ input
   height: 18%
   width: 90%
   margin: 10px
+
+select
+  display: grid
+  height: 50%
+  width: 80%
+  margin: 10px
+  font-size: 100%
+  background-color: rgba(33, 167, 255, 1)
 
 button
   color dark

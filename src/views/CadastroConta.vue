@@ -20,4 +20,8 @@ export default {
 img
   margin: 20px
 
+.cadastroContas{
+  background: darkgreen
+  color: #fff
+}
 </style>
