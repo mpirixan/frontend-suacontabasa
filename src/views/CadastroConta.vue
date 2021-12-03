@@ -21,7 +21,7 @@ img
   margin: 20px
 
 .cadastroContas{
-  background: darkgreen
+  background: rgba(37, 62, 62, 0.7)
   color: #fff
 }
 </style>

@@ -18,6 +18,11 @@
                   </pre>
                 </div>
             </div>
+        <div id="nav">
+        <router-link to="/" custom v-slot="{ navigate }">
+        <button @click="navigate" @keypress.enter="navigate" role="link">Home</button>
+        </router-link>
+      </div>
     </div>
 </template>
 

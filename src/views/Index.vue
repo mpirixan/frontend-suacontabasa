@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-h5
+.Logo
   text-align: center
   margin: 0
   position: absolute
@@ -28,5 +28,4 @@ h5
   left: 50%
   margin-right: -50%
   transform: translate(-50%, -50%)
-
 </style>
