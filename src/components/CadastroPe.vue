@@ -50,6 +50,8 @@ function cadastro () {
   })
     .then(function (response) {
       console.log(response)
+      const jsonObj = JSON.stringify(response.data, undefined, 4)
+      window.alert('Dados salvos com sucesso\n' + jsonObj)
     })
     .catch(function (error) {
       console.log(error)
@@ -67,103 +69,6 @@ export default {
 
 </script>
 
-<style lang="stylus">
-.grid-labels{
-  grid-area: Label
-  display: inline-grid
-  justify-items: center
-  align-items: center
-  }
-
-.grid-inputs{
-  grid-area: Inputs
-  display: inline-grid
-  justify-items: center
-  align-items: center}
-
-.grid-item{
-  grid-area: Button}
-
-.grid-container{
-  background: lightblue
-  color: #000000
-  font-size: 130%
-  font-family: "Lucida Console", "Courier New", monospace
-  font-weight: bold
-  border: 2px solid #13b523
-  border-radius: 5px
-  padding: 5px
-  display: inline-grid
-  grid-template-columns: 1fr 1fr
-  grid-template-rows: 1fr 1fr 1fr 1.1fr 0.8fr 1.1fr
-  gap: 0px 0px
-  grid-template-areas:
-    "Label Inputs"\
-    "Label Inputs"\
-    "Label Inputs"\
-    "Label Inputs"\
-    "Label Inputs"\
-    "Button Button"
-}
-h2
-  margin 40px 0 0
-
-ul
-  list-style-type none
-  padding 0
-
-li
-  display inline-block
-  margin 0 10px
-
-a
-  color #42b983
-
-label
-  display: grid
-  color dark
-  margin 30px
-
-input
-  display: grid
-  height: 18%
-  width: 90%
-  margin: 10px
-
-select
-  display: grid
-  height: 50%
-  width: 80%
-  margin: 10px
-  font-size: 100%
-  background-color: rgba(33, 167, 255, 1)
-
-button {
-  background-color: #fff000;
-  border-radius: 12px;
-  color: #000;
-  cursor: pointer;
-  font-weight: bold;
-  padding: 10px 15px;
-  text-align: center;
-  transition: 200ms;
-  width: 50%;
-  box-sizing: border-box;
-  border: 0;
-  font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-button:not(:disabled):hover,
-button:not(:disabled):focus {
-  outline: 0;
-  background: #f4e603;
-  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
-}
-button:disabled {
-  filter: saturate(0.2) opacity(0.5);
-  cursor: not-allowed;
-}
+<style lang="stylus" scoped>
+@import '../styles/cadastros.styl'
 </style>
