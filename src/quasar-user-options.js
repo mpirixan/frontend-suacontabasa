@@ -1,7 +1,6 @@
 import Vue from 'vue'
 
 import 'quasar/dist/quasar.css'
-import lang from 'quasar/lang/en/us.js'
 import '@quasar/extras/roboto-font/roboto-font.css'
 import '@quasar/extras/material-icons/material-icons.css'
 import '@quasar/extras/fontawesome-v5/fontawesome-v5.css'
@@ -153,8 +152,7 @@ Vue.use(Quasar, {
       timeout: 2500
     },
     loading: { /* Loading defaults */ }
-  },
-  lang: lang
+  }
 })
 Notify.setDefaults({
   position: 'top',
