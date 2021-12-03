@@ -21,7 +21,6 @@ img
   margin: 20px
 
 .cadastroPessoas{
-  background: rgba(37, 62, 62, 0.7)
   color: #fff
 }
 </style>

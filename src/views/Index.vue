@@ -1,7 +1,7 @@
 <template>
 <div class="index">
     <h1>Seja Bem Vindo(a) ao Sistema!</h1>
-    <h3>Sua Conta Basa</h3>
+    <h3>Sua Conta Basa - Gold</h3>
     <Logo />
 </div>
 </template>
@@ -26,6 +26,11 @@ export default {
   position: absolute
   top: 50%
   left: 50%
-  margin-right: -50%
+  height: 100%;
+  width: 100%
   transform: translate(-50%, -50%)
+.index
+  height: 100%
+  width: 100%
+  color: rgba(255, 240, 0, 1)
 </style>

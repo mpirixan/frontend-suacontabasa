@@ -116,7 +116,8 @@ input
   width: 600px
   margin: 20px
 
-button
-  width: auto
+button{
+  width: 30%
   height: 50%
+}
 </style>
