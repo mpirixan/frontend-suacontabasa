@@ -4,7 +4,7 @@
               <div class="grid-container">
                   <div class="grid-labels">
                     <label for="idFiscal">CPF/CNPJ:</label>
-                    <label for="nome">Nome:</label>
+                    <label for="nome">Nome Completo:</label>
                     <label for="dataNasc">Data de Nascimento:</label>
                     <label for="tipoPessoa">Tipo de Pessoa:</label>
                   </div>
