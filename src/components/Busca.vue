@@ -11,11 +11,8 @@
                     <input type="number" id="idFiscal" IdFiscal />
                     <button v-on:click="buscaIdFiscal()">Buscar</button>
                   </div>
-                  </div>
                 <div class="Dados">
-                  <pre id="response" style=
-                    "color:black; font-size: 20px; font-weight: bold;">
-                  </pre>
+                  <span id="response"></span>
                 </div>
             </div>
         <div id="nav">
@@ -24,6 +21,7 @@
         </router-link>
       </div>
     </div>
+  </div>
 </template>
 
 <script>

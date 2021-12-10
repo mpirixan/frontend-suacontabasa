@@ -32,5 +32,5 @@ export default {
 .index
   height: 100%
   width: 100%
-  color: rgba(255, 240, 0, 1)
+  color: rgb(178, 255, 158, 1)
 </style>

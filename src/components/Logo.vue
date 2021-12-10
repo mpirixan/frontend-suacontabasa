@@ -28,9 +28,9 @@ export default {
   }
 
 button {
-  background-color: #fff000;
+  background-color: #086375;
   border-radius: 18px;
-  color: #000;
+  color: white;
   cursor: pointer;
   font-weight: bold;
   padding: 9px 13px;
@@ -48,7 +48,7 @@ button {
 button:not(:disabled):hover,
 button:not(:disabled):focus {
   outline: 0;
-  background: #f4e603;
+  background: #1DD3B0;
   box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 2px 6px 0 rgba(0,0,0,.15);
 }
 button:disabled {
