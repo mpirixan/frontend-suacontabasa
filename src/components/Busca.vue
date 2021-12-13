@@ -32,7 +32,8 @@ function buscaNome () {
     .then(function (response) {
       console.log(response.data)
       const jsonObj = JSON.stringify(response.data, undefined, 4)
-      document.getElementById('response').innerHTML = jsonObj
+      // document.getElementById('response').innerHTML = jsonObj
+      window.alert('Dados \n' + jsonObj)
     })
     .catch(function (error) {
       // const jsonObj = JSON.stringify(error.response.data, undefined, 4)
@@ -51,7 +52,8 @@ function buscaIdFiscal () {
     .then(function (response) {
       console.log(response.data)
       const jsonObj = JSON.stringify(response.data, undefined, 4)
-      document.getElementById('response').innerHTML = jsonObj
+      // document.getElementById('response').innerHTML = jsonObj
+      window.alert('Dados \n' + jsonObj)
     })
     .catch(function (error) {
     // handle error

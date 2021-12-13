@@ -3,13 +3,13 @@
         <h2>Cadastrar Contas na Plataforma</h2>
         <div class="grid-container">
             <div class="grid-labels">
-            <label for="idPessoa">Id Pessoa:</label>
+            <label for="idFiscal">Id Fiscal:</label>
             <label for="agencia">Agencia:</label>
             <label for="senha">Senha:</label>
             <label for="tipoConta">Tipo de Conta:</label>
             </div>
     <div class="grid-inputs">
-    <input type="number" id="idPessoa">
+    <input type="number" id="idFiscal">
     <select id="agencia" style="flex-grow: 1">
         <option value="98">Ananindeua - Cidade Nova</option>
         <option value="57">Ananindeua - Centro</option>
@@ -40,12 +40,12 @@
 <script>
 function cadastro () {
   const axios = require('axios').default
-  var idPessoa = document.getElementById('idPessoa').value
+  var idFiscal = document.getElementById('idFiscal').value
   var agencia = document.getElementById('agencia').value
   var senha = document.getElementById('senha').value
   var tipoConta = document.getElementById('tipoConta').value
 
-  axios.post('http://localhost:8080/api/v1/contas/cadastro/' + idPessoa, {
+  axios.post('http://localhost:8080/api/v1/contas/cadastro/' + idFiscal, {
     agencia: agencia,
     senha: senha,
     tipoConta: tipoConta

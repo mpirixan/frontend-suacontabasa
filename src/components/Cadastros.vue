@@ -7,7 +7,7 @@
       <button @click="navigate" @keypress.enter="navigate" role="link">Cadastro de Contas</button>
       </router-link>
       <router-link to="/busca" custom v-slot="{ navigate }">
-          <button @click="navigate" @keypress.enter="navigate" role="link">Buscar informações</button>
+          <button @click="navigate" @keypress.enter="navigate" role="link">Buscar Dados</button>
       </router-link>
     </div>
 </template>

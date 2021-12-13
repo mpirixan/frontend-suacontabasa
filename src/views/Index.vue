@@ -2,19 +2,19 @@
 <div class="index">
     <h1>Seja Bem Vindo(a) ao Sistema!</h1>
     <h3>Sua Conta Basa - Gold</h3>
-    <Logo />
+    <Cadastros />
 </div>
 </template>
 
 <script>
-import Logo from '../components/Logo.vue'
+import Cadastros from '../components/Cadastros.vue'
 export default {
   data () {
     return {
     }
   },
   components: {
-    Logo
+    Cadastros
   }
 }
 </script>
