@@ -28,7 +28,7 @@
 function buscaNome () {
   var nome = document.getElementById('nome').value
   const axios = require('axios').default
-  axios.get('http://localhost:8080/api/v1/pessoas/nome/' + nome)
+  axios.get('http://localhost:8090/api/v1/pessoas/nome/' + nome)
     .then(function (response) {
       console.log(response.data)
       const jsonObj = JSON.stringify(response.data, undefined, 4)

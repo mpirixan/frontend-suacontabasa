@@ -45,7 +45,7 @@ function cadastro () {
   var senha = document.getElementById('senha').value
   var tipoConta = document.getElementById('tipoConta').value
 
-  axios.post('http://localhost:8080/api/v1/contas/cadastro/' + idFiscal, {
+  axios.post('http://localhost:8090/api/v1/contas/cadastro/' + idFiscal, {
     agencia: agencia,
     senha: senha,
     tipoConta: tipoConta
