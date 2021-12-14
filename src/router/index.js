@@ -10,7 +10,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/Index.vue')
+    component: () => import('../views/Menu.vue')
   },
   {
     path: '/CadastroPessoas',
