@@ -1,5 +1,5 @@
 # appbanco
-### Node.js versão 13.14.0 - Recomendo utilizar o nvs (node version switch)
+### Node.js versão 12.22.0 - Recomendo utilizar o nvs (node version switch)
 
 ## Project setup
 ```
