@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import CadastroPe from '../views/CadastroPessoas.vue'
 import Busca from '../views/Busca.vue'
-import CadastroCo from '../views/CadastroConta.vue'
 
 Vue.use(VueRouter)
 
@@ -13,19 +11,14 @@ const routes = [
     component: () => import('../views/Menu.vue')
   },
   {
-    path: '/CadastroPessoas',
-    name: 'CadastroPE',
-    component: CadastroPe
+    path: '/Cadastros',
+    name: 'Cadastros',
+    component: () => import('../views/Cadastros.vue')
   },
   {
     path: '/busca',
     name: 'Busca',
     component: Busca
-  },
-  {
-    path: '/CadastroConta',
-    name: 'CadastroCO',
-    component: CadastroCo
   }
 ]
 
