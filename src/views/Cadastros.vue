@@ -1,6 +1,7 @@
 <template>
 <div class="container">
   <div class="title">
+    <h1>Cadastro no Sistema</h1>
     <img alt="Basa Logo" src="../assets/logo-header-2.png">
   </div>
   <div class="cadastroPe">
@@ -46,6 +47,7 @@ export default {
 }
 
 .title {
+    color: white
     grid-area: title
     margin: 20px }
 

@@ -16,7 +16,7 @@ const routes = [
     component: () => import('../views/Cadastros.vue')
   },
   {
-    path: '/busca',
+    path: '/Busca',
     name: 'Busca',
     component: Busca
   }

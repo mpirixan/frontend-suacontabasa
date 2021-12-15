@@ -16,6 +16,10 @@
         <router-link to="/Cadastros" custom v-slot="{ navigate }">
             <button @click="navigate" @keypress.enter="navigate" role="link">Cadastros</button>
         </router-link>
+        <p>-</p>
+        <router-link to="/Busca" custom v-slot="{ navigate }">
+            <button @click="navigate" @keypress.enter="navigate" role="link">Buscar</button>
+        </router-link>
     </div>
 </div>
 </template>

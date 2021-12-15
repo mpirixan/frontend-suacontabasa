@@ -8,7 +8,7 @@
                     <input type="text" id="nome" Nome />
                     <button v-on:click="buscaNome()">Buscar</button>
                     <h3>Por identificação fiscal</h3>
-                    <input type="number" id="idFiscal" IdFiscal />
+                    <input type="text" id="idFiscal" IdFiscal />
                     <button v-on:click="buscaIdFiscal()">Buscar</button>
                   </div>
                 <div class="Dados">
@@ -48,7 +48,7 @@ function buscaNome () {
 function buscaIdFiscal () {
   var idFiscal = document.getElementById('idFiscal').value
   const axios = require('axios').default
-  axios.get('http://localhost:8080/api/v1/pessoas/cpf-cnpj/' + idFiscal)
+  axios.get('http://localhost:8090/api/v1/pessoas/cpf-cnpj/' + idFiscal)
     .then(function (response) {
       console.log(response.data)
       const jsonObj = JSON.stringify(response.data, undefined, 4)
