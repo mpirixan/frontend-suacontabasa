@@ -9,9 +9,11 @@
   <div class="cadastroCo">
     <CadastroCo msg="Cadastro de Contas"/>
   </div>
-  <div class="Submit1"></div>
-  <div class="Submit2"></div>
-  <div class="home"></div>
+  <div class="home">
+      <router-link to="/" custom v-slot="{ navigate }">
+        <button @click="navigate" @keypress.enter="navigate" role="link">Home</button>
+      </router-link>
+  </div>
 </div>
 </template>
 <script>
@@ -28,6 +30,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '../styles/cadastros.styl'
 .container {
   display: inline-grid
   grid-template-columns: 1fr 1fr
@@ -39,7 +42,6 @@ export default {
   grid-template-areas:
     "title title"\
     "cadastroPe cadastroCo"\
-    "Submit1 Submit2"\
     "home home"
 }
 
