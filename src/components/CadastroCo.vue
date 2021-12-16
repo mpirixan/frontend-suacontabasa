@@ -1,6 +1,6 @@
 <template>
     <div class="cadastroContas">
-        <h2>Cadastrar Contas na Plataforma</h2>
+        <h2>Cadastrar Contas</h2>
         <div class="grid-container">
     <div class="grid-inputs">
     <input type="number" id="idFiscal" placeholder="CPF/CNPJ">
