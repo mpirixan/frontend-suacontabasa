@@ -12,7 +12,8 @@
                     <button v-on:click="buscaIdFiscal()">Buscar</button>
                   </div>
                 <div class="Dados">
-                  <span id="response"></span>
+                  <span id="response">
+                  </span>
                 </div>
             </div>
         <div id="nav">
@@ -31,9 +32,9 @@ function buscaNome () {
   axios.get('http://localhost:8090/api/v1/pessoas/nome/' + nome)
     .then(function (response) {
       console.log(response.data)
-      const jsonObj = JSON.stringify(response.data, undefined, 4)
-      // document.getElementById('response').innerHTML = jsonObj
-      window.alert('Dados \n' + jsonObj)
+      const jsonObj = JSON.stringify(response.data, null, '\n')
+      // document.getElementById('response').innerHTML = '<pre>' + jsonObj + '</pre>'
+      // window.alert('Dados \n' + jsonObj)
     })
     .catch(function (error) {
       // const jsonObj = JSON.stringify(error.response.data, undefined, 4)
@@ -51,7 +52,7 @@ function buscaIdFiscal () {
   axios.get('http://localhost:8090/api/v1/pessoas/cpf-cnpj/' + idFiscal)
     .then(function (response) {
       console.log(response.data)
-      const jsonObj = JSON.stringify(response.data, undefined, 4)
+      const jsonObj = JSON.stringify(response.data, undefined, '\n')
       // document.getElementById('response').innerHTML = jsonObj
       window.alert('Dados \n' + jsonObj)
     })
@@ -63,6 +64,9 @@ function buscaIdFiscal () {
     // always executed
     })
 }
+function showAlert () {
+}
+
 export default {
   methods: {
     buscaNome () {
@@ -70,6 +74,10 @@ export default {
     },
     buscaIdFiscal () {
       buscaIdFiscal()
+    },
+    showAlert () {
+      // Use sweetalert2
+      this.$swal.fire()
     }
   }
 }
