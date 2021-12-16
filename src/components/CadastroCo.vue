@@ -2,21 +2,14 @@
     <div class="cadastroContas">
         <h2>Cadastrar Contas na Plataforma</h2>
         <div class="grid-container">
-            <div class="grid-labels">
-            <label for="idFiscal">Id Fiscal:</label>
-            <label for="agencia">Agencia:</label>
-            <label for="senha">Senha:</label>
-            <label for="tipoConta">Tipo de Conta:</label>
-            </div>
     <div class="grid-inputs">
-    <input type="number" id="idFiscal">
+    <input type="number" id="idFiscal" placeholder="CPF/CNPJ">
     <select id="agencia" style="flex-grow: 1">
         <option value="98">Ananindeua - Cidade Nova</option>
         <option value="57">Ananindeua - Centro</option>
         <option value="59">Belém - Atalaia</option>
         <option value="07">Belém - Campina</option>
     </select>
-    <input type="password" id="senha" />
     <select id="tipoConta" style="flex-grow: 1">
         <option value="CONTA_CORRENTE"> Conta Corrente</option>
         <option value="POUPANÇA">Conta Poupança</option>

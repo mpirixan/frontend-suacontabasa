@@ -2,15 +2,9 @@
     <div class="cadastroPessoas">
         <h2>Cadastrar Pessoas na Plataforma</h2>
               <div class="grid-container">
-                  <div class="grid-labels">
-                    <label for="idFiscal">CPF/CNPJ:</label>
-                    <label for="nome">Nome Completo:</label>
-                    <label for="dataNasc">Data de Nascimento:</label>
-                    <label for="tipoPessoa">Tipo de Pessoa:</label>
-                  </div>
                   <div class="grid-inputs">
-                    <input type="number" id="idFiscal" />
-                    <input type="text" id="nome" />
+                    <input type="number" id="idFiscal" placeholder="CPF/CNPJ"  />
+                    <input type="text" id="nome" placeholder="NOME COMPLETO"/>
                     <input type="text" placeholder="YYYY-MM-DD"
                           onfocus="(this.type='date')"
                           onblur="(this.type='text')" id="dataNasc" />
