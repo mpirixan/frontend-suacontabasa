@@ -39,7 +39,7 @@ function cadastro () {
   var estadoCivil = document.getElementById('estadoCivil').value
 
   dataNasc = String(dataNasc)
-  axios.post('http://localhost:8090/api/v1/pessoas/cadastro', {
+  axios.post('http://191.232.183.250:8090/api/v1/pessoas/cadastro', {
     idFiscal: idFiscal,
     nome: nome,
     dataNascimento: dataNasc,

@@ -49,7 +49,7 @@ function buscaNome () {
 function buscaIdFiscal () {
   var idFiscal = document.getElementById('idFiscal').value
   const axios = require('axios').default
-  axios.get('http://localhost:8090/api/v1/pessoas/cpf-cnpj/' + idFiscal)
+  axios.get('http://191.232.183.250:8888/api/v1/pessoas/cpf-cnpj/' + idFiscal)
     .then(function (response) {
       console.log(response.data)
       const jsonObj = JSON.stringify(response.data, undefined, '\n')
